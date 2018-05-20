@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGreyBackground">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fragment_crypt_details_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/fragment_crypt_details_card_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_toolbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp">
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="BTC"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@id/fragment_crypt_details_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Bitcoin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_symbol" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_price_usd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:gravity="end|center_vertical"
+                android:text="$8313.51"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/fragment_crypt_details_symbol"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fragment_crypt_details_symbol"
+                app:layout_constraintTop_toTopOf="@+id/fragment_crypt_details_symbol" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_price_btc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:gravity="end|center_vertical"
+                android:text="1.0 BTC"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/fragment_crypt_details_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/fragment_crypt_details_name" />
+
+
+            <View
+                android:id="@+id/fragment_crypt_details_divider_percents"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/listDivider"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_name" />
+
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_1h_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1h"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_percent_change_24h_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_divider_percents" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_24h_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="24h"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_percent_change_7d_title"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_percent_change_1h_title"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_divider_percents" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_7d_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="7d"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_percent_change_24h_title"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_divider_percents" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_1h"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="-0.27%"
+                android:textColor="@android:color/holo_red_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_percent_change_24h"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_percent_change_1h_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_24h"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="-5.24%"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_percent_change_7d"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_percent_change_1h"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_percent_change_24h_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_percent_change_7d"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="-15.33%"
+                android:textColor="@android:color/holo_red_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_percent_change_24h"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_percent_change_7d_title" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/fragment_crypt_details_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_card_view"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_market_cap_usd_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Market cap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_volume_usd_24h_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Volume 24h"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_market_cap_usd_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_available_supply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Available supply"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_volume_usd_24h_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_max_supply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Max supply"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_available_supply_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_total_supply_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Total supply"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_crypt_details_max_supply_title" />
+
+
+            <View
+                android:id="@+id/fragment_crypt_details_market_cap_usd_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/colorGreyLine"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_market_cap_usd_title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_market_cap_usd"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_market_cap_usd_title"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_market_cap_usd_title" />
+
+            <View
+                android:id="@+id/fragment_crypt_details_volume_usd_24h_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/colorGreyLine"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_volume_usd_24h_title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_volume_usd_24h"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_volume_usd_24h_title"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_volume_usd_24h_title" />
+
+            <View
+                android:id="@+id/fragment_crypt_details_available_supply_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/colorGreyLine"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_available_supply_title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_available_supply"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_available_supply_title"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_available_supply_title" />
+
+            <View
+                android:id="@+id/fragment_crypt_details_max_supply_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/colorGreyLine"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_max_supply_title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_max_supply"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_max_supply_title"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_max_supply_title" />
+
+            <View
+                android:id="@+id/fragment_crypt_details_total_supply_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/colorGreyLine"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_total_supply_title"
+                app:layout_constraintEnd_toStartOf="@id/fragment_crypt_details_total_supply"
+                app:layout_constraintStart_toEndOf="@id/fragment_crypt_details_total_supply_title"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_total_supply_title" />
+
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_market_cap_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$141570030201"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_market_cap_usd_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_market_cap_usd_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_volume_usd_24h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$7375090000.0"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_volume_usd_24h_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_volume_usd_24h_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_available_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$17029650"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_available_supply_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_available_supply_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_max_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$21000000"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_max_supply_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_max_supply_title" />
+
+            <TextView
+                android:id="@+id/fragment_crypt_details_total_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$17029650"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_crypt_details_total_supply_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_crypt_details_total_supply_title" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_market_cap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="fragment_crypt_details_market_cap_usd_title,fragment_crypt_details_market_cap_usd_line,fragment_crypt_details_market_cap_usd" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="fragment_crypt_details_volume_usd_24h_title,fragment_crypt_details_volume_usd_24h_line,fragment_crypt_details_volume_usd_24h" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_available_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="fragment_crypt_details_available_supply_title,fragment_crypt_details_available_supply_line,fragment_crypt_details_available_supply" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_max_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="fragment_crypt_details_max_supply_title,fragment_crypt_details_max_supply_line,fragment_crypt_details_max_supply" />
+
+            <android.support.constraint.Group
+                android:id="@+id/group_total_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="fragment_crypt_details_total_supply_title,fragment_crypt_details_total_supply_line,fragment_crypt_details_total_supply" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

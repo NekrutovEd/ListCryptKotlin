@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/fragment_list_crypt_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/fragment_list_crypt_toolbar_search"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                app:closeIcon="@drawable/ic_baseline_close_white_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_list_crypt_toolbar_sort"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:searchIcon="@drawable/ic_baseline_search_white_24px" />
+
+            <ImageView
+                android:id="@+id/fragment_list_crypt_toolbar_sort"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_baseline_sort_white_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/fragment_list_crypt_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_list_crypt_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_list_crypt_swipe_refresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_list_crypt_toolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_list_crypt_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            android:overScrollMode="never" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

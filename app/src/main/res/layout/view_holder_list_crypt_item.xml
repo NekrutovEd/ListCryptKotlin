@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/view_holder_list_crypt_item_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="BTC"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_list_crypt_item_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|start"
+            android:text="Bitcoin"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_list_crypt_item_percent_change_24h"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_holder_list_crypt_item_symbol" />
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_price"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical|end"
+            android:text="$8313.51"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_holder_list_crypt_item_symbol"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_holder_list_crypt_item_symbol"
+            app:layout_constraintTop_toTopOf="@id/view_holder_list_crypt_item_symbol" />
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_percent_change_24h"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical|end"
+            android:text="-5.24%"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_holder_list_crypt_item_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_holder_list_crypt_item_name"
+            app:layout_constraintTop_toTopOf="@id/view_holder_list_crypt_item_name" />
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_market_cap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|start"
+            android:text="MC: $141570030201"
+            app:layout_constraintEnd_toStartOf="@id/view_holder_list_crypt_item_volume"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_holder_list_crypt_item_name" />
+
+        <TextView
+            android:id="@+id/view_holder_list_crypt_item_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|end"
+            android:text="V: $7375090000.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_holder_list_crypt_item_market_cap"
+            app:layout_constraintTop_toBottomOf="@+id/view_holder_list_crypt_item_name" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

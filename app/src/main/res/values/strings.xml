@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CoMaCapKo</string>
+
+    <string name="search">search</string>
+    <string name="sort">sort</string>
+    <string name="sort_by_rank">sort by rank</string>
+    <string name="sort_by_price">sort by price</string>
+    <string name="sort_by_volume">sort by volume</string>
+    <string name="sort_by_market_cap">sort by market cap</string>
+    <string name="sort_by_percent_change">sort by percent change</string>
+</resources>
